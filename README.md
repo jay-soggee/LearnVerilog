@@ -37,10 +37,10 @@ b   ──┺━━━┹─tmp_s─┲━━━┱─tmp_c1─┘
 c   ──────────────┺━━━┹────────────────   s
 ```
 
-![Half Adder](readme_resource/Untitled.png)
+![Half Adder](Untitled.png)
 
 Half Adder
 
-![Full Adder](readme_resource/Untitled%201.png)
+![Full Adder](Untitled%201.png)
 
 Full Adder
