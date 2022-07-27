@@ -1,4 +1,4 @@
-module fullAdderTB;
+module tb_fullAdder;
     reg a, b, c;
     wire s, co;
     integer i;
