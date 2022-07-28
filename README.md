@@ -1,7 +1,16 @@
 # Learn Verilog/SystemVerilog/HDL!
 
+### "assign" keyword
 
 ```verilog
+/*
+a   ──┲━━━┱─tmp_c0─────────────┐
+      ┃ha0┃                    ├─ or ──   co
+b   ──┺━━━┹─tmp_s─┲━━━┱─tmp_c1─┘
+                  ┃ha1┃
+c   ──────────────┺━━━┹────────────────   s
+*/
+
 module halfAdder (
     input       a, b,
     output      c, s
@@ -29,18 +38,46 @@ module fullAdder (
     assign co = tmp_c0 | tmp_c1;
     
 endmodule
-
-a   ──┲━━━┱─tmp_c0─────────────┐
-      ┃ha0┃                    ├─ or ──   co
-b   ──┺━━━┹─tmp_s─┲━━━┱─tmp_c1─┘
-                  ┃ha1┃
-c   ──────────────┺━━━┹────────────────   s
 ```
 
-![Half Adder](readme_resource/Untitled.png)
+![Half Adder](mdresource_HA.png)
 
-Half Adder
+![Full Adder](mdresource_FA.png)
 
-![Full Adder](readme_resource/Untitled%201.png)
+### "always" block
 
-Full Adder
+```verilog
+module exCombLogic (
+    input       a, b, c, d, e,
+    output  reg o
+);
+    always @ (a or b or c or d) begin
+        o <= ((a & b) | (c ^ d) & ~e);
+    end
+     
+endmodule
+```
+
+![Combination Logic](mdresource_CL.png)
+
+```verilog
+module exTFF (
+    input       clk,
+                rst,
+                d,
+    output  reg q
+);
+    always @ (posedge clk or negedge rst) begin
+        if (rst == 0)
+            q <= 0;
+        else
+            if (d == 1)
+                q <= ~q;
+            else
+                q <= q;
+    end
+
+endmodule
+```
+
+![T-Flip Flop](mdresource_TFF.png)
