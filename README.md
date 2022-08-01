@@ -40,8 +40,6 @@ module fullAdder (
 endmodule
 ```
 
-![Half Adder](mdresource_HA.png)
-
 ![Full Adder](mdresource_FA.png)
 
 ### "always" block
