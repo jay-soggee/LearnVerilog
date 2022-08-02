@@ -79,3 +79,11 @@ endmodule
 ```
 
 ![T-Flip Flop](mdresource_TFF.png)
+
+### mealy vs moore machine
+
+Sequence(Binary 1011) Detector
+
+![untitled](mdresource_SDMoore.png)
+
+![untitled](mdresource_SDMealy.png)
