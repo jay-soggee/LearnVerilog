@@ -87,3 +87,7 @@ Sequence(Binary 1011) Detector
 ![untitled](mdresource_SDMoore.png)
 
 ![untitled](mdresource_SDMealy.png)
+
+## Cyclic Modulo
+
+![untitled](cyclicMod.png)

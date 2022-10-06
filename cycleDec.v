@@ -2,35 +2,38 @@
 // input m is reversed message sequence
 // output u is result of decoding
 
-module cycleDec #(parameter [3:0] P = 4'b1101)(
+module cycleDec (
     input   clk,
-            rst,
+            nrst,
             m,
-    output  reg [2:0] u
+    output  reg lfsr1,
+                lfsr2,
+                lfsr3
 );
-    reg fb;
-    integer j;
-    always @ (posedge clk or negedge rst) begin
-        if (rst == 0)
-            u <= 3'b000;
-        else begin
-            // feedback = u[2] xor m
-            if (u[2] != m)
-                fb <= 1;
-            else
-                fb <= 0;
-            for (j = 3; j > 1; j = j - 1) begin
-                if (P[j] == 1)
-                    if (u[j - 1] != fb)
-                        u[j] = 1;
-                    else
-                        u[j] = 0;
-                else
-                    u[j] = u[j - 1];
-            end
-            u[0] <= fb;
-        end 
+    wire fb = (m != lfsr3);
 
+    always @(posedge clk or negedge nrst) begin
+        if (!nrst)
+            lfsr1 <= 1'b0;
+        else begin
+            lfsr1 <= fb;
+        end
+    end
+
+    always @(posedge clk or negedge nrst) begin
+        if (!nrst)
+            lfsr2 <= 1'b0;
+        else begin
+            lfsr2 <= (fb != lfsr1);
+        end
+    end
+
+    always @(posedge clk or negedge nrst) begin
+        if (!nrst)
+            lfsr3 <= 1'b0;
+        else begin
+            lfsr3 <= lfsr2;
+        end
     end
     
 endmodule
