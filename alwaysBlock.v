@@ -1,12 +1,15 @@
 module exTFF (
     input       clk,
                 rst,
+                set,
                 d,
     output  reg q
 );
-    always @ (posedge clk or negedge rst) begin
+    always @ (posedge clk or posedge rst or posedge set) begin
         if (rst == 0)
             q <= 0;
+        else if (set == 0)
+            q <= 1;
         else
             if (d == 1)
                 q <= ~q;
