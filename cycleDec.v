@@ -1,6 +1,6 @@
 // cyclic (7, 4) code with polynomial 1+X^1+X^3
 // input m is reversed message sequence
-// output u is result of decoding
+// output u is result of the modulo calculation
 
 module cycleDec (
     input   clk,
