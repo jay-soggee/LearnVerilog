@@ -1,8 +1,8 @@
 ## Cyclic Modulo
 
-<p align="center"><img src="cyclicMod.png" width="40%" height="40%"/>
+<p align="center"><img src="cyclicMod.png" width="40%" height="40%"/><\p>
 
-$$U^{(i)}(X)=X^iU(X)\mod(X^n+1)$$<\p>
+$$U^{(i)}(X)=X^iU(X)\mod(X^n+1)$$
 
 
 
