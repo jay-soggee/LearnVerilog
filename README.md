@@ -1,6 +1,6 @@
 ## Cyclic Modulo
 
-![untitled](cyclicMod.png) {: width="40%" height="40%"}
+![untitled](cyclicMod.png){: width="40%" height="40%"}
 
 $$U^{(i)}(X)=X^iU(X)\mod(X^n+1)$$
 
