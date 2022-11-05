@@ -91,3 +91,5 @@ Sequence(Binary 1011) Detector
 ## Cyclic Modulo
 
 ![untitled](cyclicMod.png)
+
+$$U^{(i)}(X)=X^iU(X)\mod(X^n+1)$$
