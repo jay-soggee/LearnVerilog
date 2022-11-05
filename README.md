@@ -1,3 +1,11 @@
+## Cyclic Modulo
+
+![untitled](cyclicMod.png) {: width="40%" height="40%"}
+
+$$U^{(i)}(X)=X^iU(X)\mod(X^n+1)$$
+
+
+
 # Learn Verilog/SystemVerilog/HDL!
 
 ### "assign" keyword
@@ -87,9 +95,3 @@ Sequence(Binary 1011) Detector
 ![untitled](mdresource_SDMoore.png)
 
 ![untitled](mdresource_SDMealy.png)
-
-## Cyclic Modulo
-
-![untitled](cyclicMod.png)
-
-$$U^{(i)}(X)=X^iU(X)\mod(X^n+1)$$
